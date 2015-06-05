@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/CSS/Github2.css" />
+  </head>
+  <body>
+
+    <textarea id="markdown" oninput="this.editor.update()" rows="6" cols="60">
+> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+
+> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+id sem consectetuer libero luctus adipiscing.
+    
+    </textarea>
+    <div id="preview" class="preview"> </div>
+
+    <script type="text/javascript" src="bower_components/showdown/dist/showdown.min.js"></script>
+    <script type="text/javascript" src="bower_components/showdown-table/dist/showdown-table.min.js"></script>
+    <script>
+      var converter = new showdown.Converter({ extensions: ['table'] });
+
+      function Editor(input, preview) {
+        this.update = function () {
+          preview.innerHTML = converter.makeHtml(input.value);
+        };
+        input.editor = this;
+        this.update();
+      }
+      var $ = function (id) { return document.getElementById(id); };
+      new Editor($("markdown"), $("preview"));
+
+    </script>
+  </body>
+</html>

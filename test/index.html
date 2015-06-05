@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/CSS/Github2.css" />
+  </head>
+  <body>
+    <textarea id="text-input" oninput="this.editor.update()" rows="6" cols="60">
+#111
+this is a test page
+##222
+this is a test page
+###333
+####444
+#####555
+    
+    </textarea>
+    <div id="pen" class="pen"> </div>
+    <script src="lib/JS/markdown.min.js"></script>
+    <script>
+      function Editor(input, pen) {
+        this.update = function () {
+          pen.innerHTML = markdown.toHTML(input.value);
+        };
+        input.editor = this;
+        this.update();
+      }
+      var $ = function (id) { return document.getElementById(id); };
+      new Editor($("text-input"), $("pen"));
+      // var $ = function (id) { return document.getElementById(id); };
+      // var input = $("text-input").value;
+      // preview.innerHTML = markdown.toHTML(input);
+    </script>
+  </body>
+</html>
