@@ -1,3 +1,8 @@
+#This is a document for markdown help.#
+Get it from [wowubuntu] or [GitCafe]
+[wowubuntu]: http://wowubuntu.com/markdown/
+[GitCafe]: https://gitcafe.com/riku/Markdown-Syntax-CN/
+
 概述
 
 宗旨
@@ -32,7 +37,7 @@ Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法
 
 请注意，在 HTML 区块标签间的 Markdown 格式语法将不会被处理。比如，你在 HTML 区块内使用 Markdown 样式的__强调__会没有效果。
 
-HTML 的区段（行内）标签如 \<span>、\<cite>、\<del> 可以在 Markdown 的段落、列表或是标题里随意使用。依照个人习惯，甚至可以不用 Markdown 格式，而直接采用 HTML 标签来格式化。举例说明：如果比较喜欢 HTML 的 \<a> 或 \<img> 标签，可以直接使用这些标签，而不用 Markdown 提供的链接或是图像标签语法。
+HTML 的区段（行内）标签如 <span>、<cite>、<del> 可以在 Markdown 的段落、列表或是标题里随意使用。依照个人习惯，甚至可以不用 Markdown 格式，而直接采用 HTML 标签来格式化。举例说明：如果比较喜欢 HTML 的 \<a> 或 \<img> 标签，可以直接使用这些标签，而不用 Markdown 提供的链接或是图像标签语法。
 
 和处在 HTML 区块标签间不同，Markdown 语法在 HTML 区段标签间是有效的。
 
